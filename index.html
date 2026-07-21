@@ -9,57 +9,55 @@
 <style>
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
-    background: #0a0a0a;
-    color: white;
-    line-height: 1.6;
+    background:#0a0a0a;
+    color:white;
+    line-height:1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
 
 /* HEADER */
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 10;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding:25px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:10;
 }
 
-.logo-image {
-    width: 130px;
-    height: auto;
+.logo {
+    width:120px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 16px;
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
 }
 
 nav a:hover {
-    color: #ff7a00;
+    color:#ff7a00;
 }
 
 
@@ -67,17 +65,17 @@ nav a:hover {
 
 .hero {
 
-    min-height: 90vh;
+    min-height:90vh;
 
     background:
     linear-gradient(
         rgba(0,0,0,0.65),
         rgba(0,0,0,0.85)
     ),
-    url("hero.jpg");
+    url("TOPMOD Background.png");
 
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+    background-position:center;
 
     display:flex;
     align-items:center;
@@ -87,10 +85,7 @@ nav a:hover {
 
 
 .hero-content {
-
     width:100%;
-    margin-top:60px;
-
 }
 
 
@@ -102,16 +97,16 @@ nav a:hover {
 }
 
 
-.hero h1 {
+h1 {
 
-    font-size: clamp(40px,6vw,70px);
+    font-size:clamp(40px,6vw,70px);
     line-height:1.1;
     margin-bottom:20px;
 
 }
 
 
-.hero h1 span {
+h1 span {
 
     color:#ff7a00;
 
@@ -138,6 +133,9 @@ nav a:hover {
     border-radius:5px;
     font-weight:bold;
     text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
 
 }
 
@@ -151,7 +149,6 @@ nav a:hover {
 
 
 /* SECTIONS */
-
 
 section {
 
@@ -203,8 +200,7 @@ h2 {
 
 
 
-/* PROCESS */
-
+/* HOW IT WORKS */
 
 .steps {
 
@@ -217,21 +213,21 @@ h2 {
 
 .step-number {
 
-    color:#ff7a00;
     font-size:45px;
     font-weight:bold;
+    color:#ff7a00;
 
 }
 
 
-/* SIGNUP */
 
+/* FORM */
 
 .signup {
 
     background:#151515;
-    padding:60px 25px;
     border-radius:15px;
+    padding:50px 30px;
     text-align:center;
 
 }
@@ -244,9 +240,64 @@ h2 {
 }
 
 
+.form {
+
+    max-width:600px;
+    margin:40px auto 0;
+    text-align:left;
+
+}
+
+
+.form label {
+
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    font-weight:bold;
+
+}
+
+
+.form input {
+
+    width:100%;
+    padding:14px;
+    background:#0a0a0a;
+    border:1px solid #333;
+    border-radius:5px;
+    color:white;
+    font-size:16px;
+
+}
+
+
+.form input:focus {
+
+    outline:none;
+    border-color:#ff7a00;
+
+}
+
+
+.checkbox {
+
+    margin:25px 0;
+    font-size:14px;
+    color:#ccc;
+
+}
+
+
+.checkbox input {
+
+    width:auto;
+
+}
+
+
 
 /* FOOTER */
-
 
 footer {
 
@@ -286,14 +337,14 @@ footer {
 <header>
 
 <a href="https://topmod.co.uk">
-<img src="logo.png" class="logo-image" alt="TOP MOD">
+<img src="TOPMOD Logo.png" class="logo" alt="TOP MOD">
 </a>
 
 
 <nav>
 
 <a href="#about">About</a>
-<a href="#process">How It Works</a>
+<a href="#how">How It Works</a>
 <a href="#signup">Join List</a>
 
 </nav>
@@ -310,7 +361,9 @@ footer {
 <div class="hero-content">
 
 
-<img src="logo.png" class="hero-logo" alt="TOP MOD">
+<a href="https://topmod.co.uk">
+<img src="TOPMOD Logo.png" class="hero-logo" alt="TOP MOD">
+</a>
 
 
 <h1>
@@ -320,7 +373,7 @@ Delivered <span>Direct.</span>
 
 
 <p>
-TOP Market Opportunities Direct connects property investors with carefully sourced opportunities, including BRRR, refurbishment and value-add projects.
+TOP Market Opportunities Direct connects property investors with carefully sourced opportunities including BRRR, refurbishment and value-add projects.
 </p>
 
 
@@ -339,7 +392,6 @@ Join Investor List
 
 <section id="about">
 
-
 <div class="container">
 
 
@@ -354,11 +406,11 @@ Why Join TOP MOD?
 <div class="card">
 
 <h3>
-On & Off Market Opportunities
+On & Off Market
 </h3>
 
 <p>
-Access property opportunities sourced through multiple channels, including direct approaches and market research.
+Access property opportunities sourced through multiple channels, including direct opportunities and market research.
 </p>
 
 </div>
@@ -371,7 +423,7 @@ Investor Focused
 </h3>
 
 <p>
-Receive opportunities presented clearly with the information needed to evaluate potential investments.
+Opportunities presented clearly so investors can quickly understand the potential and decide if it fits their strategy.
 </p>
 
 </div>
@@ -392,7 +444,6 @@ Focused on properties with potential through refurbishment, repositioning and st
 
 </div>
 
-
 </div>
 
 </section>
@@ -400,8 +451,8 @@ Focused on properties with potential through refurbishment, repositioning and st
 
 
 
-<section id="process">
 
+<section id="how">
 
 <div class="container">
 
@@ -416,59 +467,50 @@ How It Works
 
 <div>
 
-<div class="step-number">
-01
-</div>
+<div class="step-number">01</div>
 
 <h3>
 Join The List
 </h3>
 
 <p>
-Tell us what type of opportunities match your investment strategy.
+Tell us what type of opportunities you are interested in.
 </p>
 
 </div>
 
 
-
 <div>
 
-<div class="step-number">
-02
-</div>
+<div class="step-number">02</div>
 
 <h3>
 Receive Opportunities
 </h3>
 
 <p>
-We send suitable property opportunities directly to investors.
+Suitable opportunities are sent directly to investors.
 </p>
 
 </div>
 
 
-
 <div>
 
-<div class="step-number">
-03
-</div>
+<div class="step-number">03</div>
 
 <h3>
 Review & Decide
 </h3>
 
 <p>
-Carry out your own due diligence and decide if the opportunity fits.
+Complete your own due diligence and decide if the opportunity fits your goals.
 </p>
 
 </div>
 
 
 </div>
-
 
 </div>
 
@@ -477,8 +519,8 @@ Carry out your own due diligence and decide if the opportunity fits.
 
 
 
-<section id="signup">
 
+<section id="signup">
 
 <div class="container">
 
@@ -492,29 +534,70 @@ Join The Investor List
 
 
 <p>
-Be the first to receive new TOP MOD property opportunities.
+Be the first to receive TOP MOD property opportunities.
 </p>
 
 
-<br>
+
+<form class="form" action="https://topmod.us6.list-manage.com/subscribe/post?u=669610116eb3762793be4d090&amp;id=088de04d48&amp;f_id=0058c2e1f0" method="post" target="_blank">
 
 
-<!-- MAILCHIMP EMBED GOES HERE -->
+<label>Name *</label>
+<input type="text" name="MMERGE7" required>
+
+
+<label>Email Address *</label>
+<input type="email" name="EMAIL" required>
+
+
+<label>Phone Number</label>
+<input type="text" name="PHONE">
+
+
+<label>Area of Interest</label>
+<input type="text" name="MMERGE3">
+
+
+<label>Deal Type</label>
+<input type="text" name="MMERGE10">
+
+
+<label>Price Range</label>
+<input type="text" name="MMERGE8">
+
+
+<div class="checkbox">
+
+<input type="checkbox" required>
+
+I agree to receive emails from TOP Market Opportunities Direct about property opportunities and updates.
+
+</div>
+
+
+<input type="submit" class="button" value="Join Investor List">
+
+
+<div style="position:absolute; left:-5000px;">
+<input type="text" name="b_669610116eb3762793be4d090_088de04d48" tabindex="-1">
+</div>
+
+
+</form>
 
 
 </div>
 
 
 </div>
-
 
 </section>
 
 
 
 
-<section>
 
+<section>
 
 <div class="container">
 
@@ -526,15 +609,15 @@ About TOP MOD
 
 <p style="color:#ccc;max-width:800px;">
 
-TOP Market Opportunities Direct helps property investors discover potential opportunities by sourcing, analysing and presenting deals clearly. Our goal is to connect investors with opportunities that match their strategy.
+TOP Market Opportunities Direct helps property investors discover potential opportunities by sourcing, analysing and presenting property deals clearly.
 
 </p>
 
 
 </div>
 
-
 </section>
+
 
 
 
@@ -544,7 +627,6 @@ TOP Market Opportunities Direct helps property investors discover potential oppo
 © 2026 TOP MOD - Market Opportunities Direct
 
 </footer>
-
 
 
 </body>
