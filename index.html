@@ -336,7 +336,33 @@ select {
 
 }
 
+.checkbox-group {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:10px;
+}
 
+.checkbox-group label {
+    background:#222;
+    padding:10px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.checkbox-group input {
+    width:auto;
+    margin-right:8px;
+}
+
+
+@media(max-width:600px){
+
+.checkbox-group {
+    grid-template-columns:1fr;
+}
+
+}
 
 /* FOOTER */
 
@@ -591,51 +617,73 @@ name="phone">
 Area of Interest
 </label>
 
-<select name="area">
+<div class="checkbox-group">
 
-<option value="">
-Select area
-</option>
+<label>
+<input type="checkbox" name="area" value="Luton">
+Luton
+</label>
 
-<option>Luton</option>
+<label>
+<input type="checkbox" name="area" value="Dunstable">
+Dunstable
+</label>
 
-<option>Dunstable</option>
+<label>
+<input type="checkbox" name="area" value="Milton Keynes">
+Milton Keynes
+</label>
 
-<option>Milton Keynes</option>
+<label>
+<input type="checkbox" name="area" value="Bedford">
+Bedford
+</label>
 
-<option>Bedford</option>
+<label>
+<input type="checkbox" name="area" value="Northampton">
+Northampton
+</label>
 
-<option>Northampton</option>
-
-<option>Other</option>
-
-</select>
-
+</div>
 
 
 <label>
 Deal Type
 </label>
 
-<select name="dealType">
+<div class="checkbox-group">
 
-<option value="">
-Select strategy
-</option>
+<label>
+<input type="checkbox" name="dealType" value="BRRR">
+BRRR
+</label>
 
-<option>BRRR</option>
+<label>
+<input type="checkbox" name="dealType" value="Buy To Let">
+Buy To Let
+</label>
 
-<option>Buy To Let</option>
+<label>
+<input type="checkbox" name="dealType" value="Flip">
+Flip
+</label>
 
-<option>Flip</option>
+<label>
+<input type="checkbox" name="dealType" value="Commercial">
+Commercial
+</label>
 
-<option>Commercial</option>
+<label>
+<input type="checkbox" name="dealType" value="Land">
+Land
+</label>
 
-<option>Land</option>
+<label>
+<input type="checkbox" name="dealType" value="Other">
+Other
+</label>
 
-<option>Other</option>
-
-</select>
+</div>
 
 
 
@@ -677,15 +725,15 @@ Join Investor List
 
 <div class="success" id="success">
 
-✅ Thank you for subscribing!  
-You will receive TOP MOD opportunities shortly.
+Thank you for subscribing!  
+You will receive TOP Market Opportunities Directly.
 
 </div>
 
 
 <div class="error" id="error">
 
-Something went wrong. Please try again.
+Already Subscribed!
 
 </div>
 
@@ -722,10 +770,6 @@ TOP Market Opportunities Direct helps property investors discover potential oppo
 <footer>
 
 © 2026 TOP MOD - Market Opportunities Direct
-
-<br><br>
-
-Privacy Policy | Terms
 
 </footer>
 
