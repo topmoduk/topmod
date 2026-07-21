@@ -27,7 +27,7 @@ body {
 
 .container {
     width:90%;
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
 }
 
@@ -35,29 +35,13 @@ body {
 /* HEADER */
 
 header {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    padding:25px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:10;
+    padding:25px 0;
+    text-align:center;
 }
 
 .logo {
-    width:120px;
-}
-
-nav a {
-    color:white;
-    text-decoration:none;
-    margin-left:30px;
-}
-
-nav a:hover {
-    color:#ff7a00;
+    width:220px;
+    max-width:70%;
 }
 
 
@@ -65,7 +49,12 @@ nav a:hover {
 
 .hero {
 
-    min-height:90vh;
+    min-height:85vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 
     background:
     linear-gradient(
@@ -77,27 +66,17 @@ nav a:hover {
     background-size:cover;
     background-position:center;
 
-    display:flex;
-    align-items:center;
-    text-align:center;
-
+    border-radius:15px;
+    margin-bottom:70px;
 }
 
 
 .hero-content {
-    width:100%;
+    max-width:850px;
 }
 
 
-.hero-logo {
-
-    width:220px;
-    margin-bottom:25px;
-
-}
-
-
-h1 {
+.hero h1 {
 
     font-size:clamp(40px,6vw,70px);
     line-height:1.1;
@@ -106,7 +85,7 @@ h1 {
 }
 
 
-h1 span {
+.hero span {
 
     color:#ff7a00;
 
@@ -115,8 +94,6 @@ h1 span {
 
 .hero p {
 
-    max-width:750px;
-    margin:auto;
     font-size:20px;
     color:#ddd;
     margin-bottom:35px;
@@ -124,18 +101,25 @@ h1 span {
 }
 
 
+
 .button {
 
     display:inline-block;
     background:#ff7a00;
-    color:#000;
-    padding:15px 40px;
-    border-radius:5px;
+    color:black;
+
+    padding:16px 40px;
+
+    border-radius:6px;
+
     font-weight:bold;
     text-decoration:none;
-    border:none;
+
     cursor:pointer;
-    font-size:16px;
+
+    border:none;
+
+    transition:.3s;
 
 }
 
@@ -147,28 +131,37 @@ h1 span {
 }
 
 
-
 /* SECTIONS */
 
 section {
 
-    padding:80px 0;
+    padding:70px 0;
 
 }
 
 
 h2 {
 
+    text-align:center;
+
     font-size:40px;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
 
 }
+
+
+
+/* CARDS */
 
 
 .cards {
 
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:25px;
 
 }
@@ -177,9 +170,12 @@ h2 {
 .card {
 
     background:#151515;
+
     padding:30px;
+
     border-radius:12px;
-    border:1px solid #222;
+
+    border:1px solid #252525;
 
 }
 
@@ -187,6 +183,7 @@ h2 {
 .card h3 {
 
     color:#ff7a00;
+
     margin-bottom:15px;
 
 }
@@ -202,20 +199,64 @@ h2 {
 
 /* HOW IT WORKS */
 
+
 .steps {
 
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:30px;
 
 }
 
 
-.step-number {
+.step {
 
-    font-size:45px;
-    font-weight:bold;
+    text-align:center;
+
+}
+
+
+.number {
+
+    font-size:50px;
+
     color:#ff7a00;
+
+    font-weight:bold;
+
+}
+
+
+
+/* SIGNUP */
+
+
+.signup {
+
+    background:#151515;
+
+    padding:50px 30px;
+
+    border-radius:15px;
+
+    max-width:650px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+
+.signup p {
+
+    color:#ccc;
+
+    margin-bottom:25px;
 
 }
 
@@ -223,75 +264,75 @@ h2 {
 
 /* FORM */
 
-.signup {
 
-    background:#151515;
-    border-radius:15px;
-    padding:50px 30px;
-    text-align:center;
+form {
 
-}
-
-
-.signup p {
-
-    color:#ccc;
-
-}
-
-
-.form {
-
-    max-width:600px;
-    margin:40px auto 0;
     text-align:left;
 
 }
 
 
-.form label {
+label {
 
     display:block;
+
     margin-top:15px;
+
     margin-bottom:5px;
-    font-weight:bold;
+
+    color:#ddd;
 
 }
 
 
-.form input {
+input,
+select {
 
     width:100%;
-    padding:14px;
-    background:#0a0a0a;
-    border:1px solid #333;
+
+    padding:13px;
+
     border-radius:5px;
+
+    border:none;
+
+    background:#222;
+
     color:white;
+
     font-size:16px;
 
 }
 
 
-.form input:focus {
 
-    outline:none;
-    border-color:#ff7a00;
+.success {
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    background:#1c5c2a;
+
+    color:white;
+
+    font-weight:bold;
 
 }
 
 
-.checkbox {
 
-    margin:25px 0;
-    font-size:14px;
-    color:#ccc;
+.error {
 
-}
+    display:none;
 
+    margin-top:20px;
 
-.checkbox input {
-
-    width:auto;
+    color:#ff5555;
 
 }
 
@@ -299,32 +340,35 @@ h2 {
 
 /* FOOTER */
 
+
 footer {
 
     text-align:center;
-    padding:30px;
+
+    padding:40px 0;
+
     color:#777;
 
 }
 
 
 
-@media(max-width:700px){
+@media(max-width:600px){
 
-    nav {
-        display:none;
-    }
+.hero {
 
-    .hero-logo {
-        width:170px;
-    }
-
-    h2 {
-        font-size:32px;
-    }
+    min-height:70vh;
 
 }
 
+
+h2 {
+
+    font-size:32px;
+
+}
+
+}
 
 </style>
 
@@ -334,36 +378,24 @@ footer {
 <body>
 
 
+<div class="container">
+
+
 <header>
 
-<a href="https://topmod.co.uk">
-<img src="TOPMOD Logo.png" class="logo" alt="TOP MOD">
+<a href="index.html">
+
+<img src="TOPMOD Logo.png" class="logo">
+
 </a>
 
-
-<nav>
-
-<a href="#about">About</a>
-<a href="#how">How It Works</a>
-<a href="#signup">Join List</a>
-
-</nav>
-
-
 </header>
-
-
 
 
 <section class="hero">
 
 
 <div class="hero-content">
-
-
-<a href="https://topmod.co.uk">
-<img src="TOPMOD Logo.png" class="hero-logo" alt="TOP MOD">
-</a>
 
 
 <h1>
@@ -377,7 +409,7 @@ TOP Market Opportunities Direct connects property investors with carefully sourc
 </p>
 
 
-<a class="button" href="#signup">
+<a href="#signup" class="button">
 Join Investor List
 </a>
 
@@ -388,15 +420,11 @@ Join Investor List
 </section>
 
 
-
-
-<section id="about">
-
-<div class="container">
+<section>
 
 
 <h2>
-Why Join TOP MOD?
+Why TOP MOD?
 </h2>
 
 
@@ -406,14 +434,15 @@ Why Join TOP MOD?
 <div class="card">
 
 <h3>
-On & Off Market
+On & Off Market Opportunities
 </h3>
 
 <p>
-Access property opportunities sourced through multiple channels, including direct opportunities and market research.
+Access property opportunities sourced through multiple channels and presented clearly for investors.
 </p>
 
 </div>
+
 
 
 <div class="card">
@@ -423,16 +452,17 @@ Investor Focused
 </h3>
 
 <p>
-Opportunities presented clearly so investors can quickly understand the potential and decide if it fits their strategy.
+Receive opportunities matched to your preferred strategy, location and budget.
 </p>
 
 </div>
 
 
+
 <div class="card">
 
 <h3>
-Value Creation
+Value Driven
 </h3>
 
 <p>
@@ -444,18 +474,10 @@ Focused on properties with potential through refurbishment, repositioning and st
 
 </div>
 
-</div>
 
 </section>
 
-
-
-
-
-<section id="how">
-
-<div class="container">
-
+<section>
 
 <h2>
 How It Works
@@ -465,13 +487,11 @@ How It Works
 <div class="steps">
 
 
-<div>
+<div class="step">
 
-<div class="step-number">01</div>
+<div class="number">01</div>
 
-<h3>
-Join The List
-</h3>
+<h3>Join The List</h3>
 
 <p>
 Tell us what type of opportunities you are interested in.
@@ -480,31 +500,29 @@ Tell us what type of opportunities you are interested in.
 </div>
 
 
-<div>
 
-<div class="step-number">02</div>
+<div class="step">
 
-<h3>
-Receive Opportunities
-</h3>
+<div class="number">02</div>
+
+<h3>Receive Deals</h3>
 
 <p>
-Suitable opportunities are sent directly to investors.
+We send suitable TOP MOD opportunities directly to investors.
 </p>
 
 </div>
 
 
-<div>
 
-<div class="step-number">03</div>
+<div class="step">
 
-<h3>
-Review & Decide
-</h3>
+<div class="number">03</div>
+
+<h3>Review & Decide</h3>
 
 <p>
-Complete your own due diligence and decide if the opportunity fits your goals.
+Carry out your own due diligence and decide if the opportunity fits your strategy.
 </p>
 
 </div>
@@ -512,17 +530,12 @@ Complete your own due diligence and decide if the opportunity fits your goals.
 
 </div>
 
-</div>
 
 </section>
 
 
 
-
-
 <section id="signup">
-
-<div class="container">
 
 
 <div class="signup">
@@ -539,67 +552,154 @@ Be the first to receive TOP MOD property opportunities.
 
 
 
-<form class="form" action="https://topmod.us6.list-manage.com/subscribe/post?u=669610116eb3762793be4d090&amp;id=088de04d48&amp;f_id=0058c2e1f0" method="post" target="_blank">
+<form id="topmod-form">
 
 
-<label>Name *</label>
-<input type="text" name="MMERGE7" required>
+<label>
+Name *
+</label>
+
+<input 
+type="text"
+name="name"
+required>
 
 
-<label>Email Address *</label>
-<input type="email" name="EMAIL" required>
+
+<label>
+Email Address *
+</label>
+
+<input
+type="email"
+name="email"
+required>
 
 
-<label>Phone Number</label>
-<input type="text" name="PHONE">
+
+<label>
+Phone Number
+</label>
+
+<input
+type="text"
+name="phone">
 
 
-<label>Area of Interest</label>
-<input type="text" name="MMERGE3">
+
+<label>
+Area of Interest
+</label>
+
+<select name="area">
+
+<option value="">
+Select area
+</option>
+
+<option>Luton</option>
+
+<option>Dunstable</option>
+
+<option>Milton Keynes</option>
+
+<option>Bedford</option>
+
+<option>Northampton</option>
+
+<option>Other</option>
+
+</select>
 
 
-<label>Deal Type</label>
-<input type="text" name="MMERGE10">
+
+<label>
+Deal Type
+</label>
+
+<select name="dealType">
+
+<option value="">
+Select strategy
+</option>
+
+<option>BRRR</option>
+
+<option>Buy To Let</option>
+
+<option>Flip</option>
+
+<option>Commercial</option>
+
+<option>Land</option>
+
+<option>Other</option>
+
+</select>
 
 
-<label>Price Range</label>
-<input type="text" name="MMERGE8">
+
+<label>
+Price Range
+</label>
 
 
-<div class="checkbox">
+<select name="priceRange">
 
-<input type="checkbox" required>
+<option value="">
+Select range
+</option>
 
-I agree to receive emails from TOP Market Opportunities Direct about property opportunities and updates.
+<option>Under £100,000</option>
 
-</div>
+<option>£100,000 - £200,000</option>
+
+<option>£200,000 - £300,000</option>
+
+<option>£300,000+</option>
+
+</select>
 
 
-<input type="submit" class="button" value="Join Investor List">
+<br><br>
 
 
-<div style="position:absolute; left:-5000px;">
-<input type="text" name="b_669610116eb3762793be4d090_088de04d48" tabindex="-1">
-</div>
+<button class="button" type="submit">
+
+Join Investor List
+
+</button>
 
 
 </form>
 
 
+
+<div class="success" id="success">
+
+✅ Thank you for subscribing!  
+You will receive TOP MOD opportunities shortly.
+
 </div>
 
 
+<div class="error" id="error">
+
+Something went wrong. Please try again.
+
 </div>
+
+
+
+</div>
+
 
 </section>
 
 
 
 
-
 <section>
-
-<div class="container">
 
 
 <h2>
@@ -607,17 +707,14 @@ About TOP MOD
 </h2>
 
 
-<p style="color:#ccc;max-width:800px;">
+<p style="color:#ccc; max-width:800px; margin:auto; text-align:center;">
 
-TOP Market Opportunities Direct helps property investors discover potential opportunities by sourcing, analysing and presenting property deals clearly.
+TOP Market Opportunities Direct helps property investors discover potential opportunities by sourcing, analysing and presenting deals clearly. Our aim is to connect investors with opportunities that match their investment goals.
 
 </p>
 
 
-</div>
-
 </section>
-
 
 
 
@@ -626,9 +723,133 @@ TOP Market Opportunities Direct helps property investors discover potential oppo
 
 © 2026 TOP MOD - Market Opportunities Direct
 
+<br><br>
+
+Privacy Policy | Terms
+
 </footer>
+
+
+
+</div>
+
+
+
+<script>
+
+
+const form = document.getElementById("topmod-form");
+
+
+form.addEventListener("submit", async function(e){
+
+
+e.preventDefault();
+
+
+
+const button = form.querySelector("button");
+
+
+button.innerText="Submitting...";
+
+button.disabled=true;
+
+
+
+const data = {
+
+name: form.name.value,
+
+email: form.email.value,
+
+phone: form.phone.value,
+
+area: form.area.value,
+
+dealType: form.dealType.value,
+
+priceRange: form.priceRange.value
+
+};
+
+
+
+try {
+
+
+const response = await fetch(
+
+"https://topmod-subscribe.vlad-683.workers.dev",
+
+{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json"
+
+},
+
+body:JSON.stringify(data)
+
+}
+
+);
+
+
+
+const result = await response.json();
+
+
+
+if(result.success){
+
+
+form.style.display="none";
+
+
+document.getElementById("success").style.display="block";
+
+
+}
+
+else {
+
+
+throw new Error();
+
+
+}
+
+
+
+}
+
+
+catch(error){
+
+
+document.getElementById("error").style.display="block";
+
+
+button.innerText="Join Investor List";
+
+button.disabled=false;
+
+
+}
+
+
+
+});
+
+
+</script>
+
 
 
 </body>
 
-</html>
+</html>    
