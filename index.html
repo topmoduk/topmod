@@ -769,7 +769,7 @@ We work with active property investors seeking BRRR, refurbishment and value-add
 
 
 
-<form id="topmod-form">
+<form id="topmod-form" novalidate>
 
 
 
@@ -941,45 +941,51 @@ Price Range
 </label>
 
 
-<select name="priceRange"
-style="
-width:100%;
-padding:14px;
-background:#222;
-color:white;
-border:none;
-border-radius:7px;
-font-size:16px;
-">
+<div class="dropdown" id="priceDropdown">
 
 
-<option value="">
-Select range
-</option>
+<div class="dropdown-button">
+Select price ranges
+</div>
 
 
-<option>
+<div class="dropdown-content">
+
+
+<label>
+<input type="checkbox" value="Under £100,000">
+Under £100,000
+</label>
+
+
+<label>
+<input type="checkbox" value="£100,000 - £200,000">
 £100,000 - £200,000
-</option>
+</label>
 
 
-<option>
+<label>
+<input type="checkbox" value="£200,000 - £300,000">
 £200,000 - £300,000
-</option>
+</label>
 
 
-<option>
+<label>
+<input type="checkbox" value="£300,000 - £500,000">
 £300,000 - £500,000
-</option>
+</label>
 
 
-<option>
+<label>
+<input type="checkbox" value="£500,000+">
 £500,000+
-</option>
+</label>
 
 
-</select>
+</div>
 
+
+</div>
 
 
 
@@ -1176,6 +1182,7 @@ setupDropdown("areaDropdown");
 
 setupDropdown("dealDropdown");
 
+setupDropdown("priceDropdown");
 
 
 
@@ -1216,6 +1223,10 @@ form.addEventListener("submit",async function(e){
 e.preventDefault();
 
 
+document.getElementById("error").style.display="none";
+
+document.getElementById("success").style.display="none";
+
 
 
 
@@ -1242,6 +1253,9 @@ const deals=[...document.querySelectorAll("#dealDropdown input:checked")]
 .join(", ");
 
 
+const prices=[...document.querySelectorAll("#priceDropdown input:checked")]
+.map(x=>x.value)
+.join(", ");
 
 
 
@@ -1263,8 +1277,7 @@ area:areas,
 dealType:deals,
 
 
-priceRange:form.priceRange.value
-
+priceRange:prices
 
 
 };
