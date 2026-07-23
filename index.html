@@ -781,20 +781,20 @@ Request Investor Access
 
 <p>
 
-Complete the form below to register your interest in receiving TOP Market Opportunities Direct opportunities.
+Complete the form below to register your interest in receiving TOP Market Opportunities Directly to your inbox.
 
 </p>
 
 
 <p>
 
-We work with active property investors seeking BRRR, refurbishment and value-add opportunities.
+We work with active property investors seeking BRRR, flips and other value-add opportunities.
 
 </p>
 
 
 
-<form id="topmod-form" novalidate>
+<form id="topmod-form">
 
 
 
@@ -1284,26 +1284,39 @@ const prices=[...document.querySelectorAll("#priceDropdown input:checked")]
 
 
 
+const name = form.name.value.trim();
+const email = form.email.value.trim();
+
+
+if(!name || !email){
+
+    document.getElementById("error").innerText =
+    "Please enter your name and email address.";
+
+    document.getElementById("error").style.display="block";
+
+    button.innerText="Request Investor Access";
+
+    button.disabled=false;
+
+    return;
+
+}
+
+
 const data={
 
+name:name,
 
-name:form.name.value,
+email:email,
 
-
-email:form.email.value,
-
-
-phone:form.phone.value,
-
+phone:form.phone.value.trim(),
 
 area:areas,
 
-
 dealType:deals,
 
-
 priceRange:prices
-
 
 };
 
